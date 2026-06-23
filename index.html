@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Título de la página-->
+    <title>Proyecto UTP</title>
+    <!--Enlace a styles.css-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--Icono de la pestaña-->
+    <link rel="shortcut icon" href="assets/img/plane.png" type="image/x-icon">
+
+    <!---Enlazar html con fuentes externas-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Enlazar HTML con la librería de iconos de font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- Barra superior -->
+    <section id="topbar" class="padding-xs">
+        <div class="container">
+            <div class="topbar-container">
+                <div class="topbar-contacts">
+                    <a target="_blank" href="tel:+51976446775">
+                        <i class="fa-solid fa-phone"></i>
+                        (+51) 999-999-999
+                    </a>
+                    <a target="_blank" href="mailto:contacto@oftalmisalud.com">
+                        <i class="fa-regular fa-envelope"></i>
+                        contacto@email.com
+                    </a>
+                </div> <!-- fin de topbar-contacts -->
+
+                <div class="topbar-social">
+                    <a target="_blank" href="https://www.facebook.com/UTP.Peru/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a target="_blank" href="https://www.instagram.com/universidadutp/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a target="_blank" href="https://www.youtube.com/channel/UCLQEBv7WN0SgOFD_nRLraRQ">
+                        <i class="fa-brands fa-youtube"></i>
+
+                    <a target="_blank" href="https://pe.linkedin.com/school/utp-universidad-tecnologica-del-peru/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div> <!-- fin del top-bar social -->
+            </div> <!-- fin de topbar-container -->
+        </div> <!-- fin del container -->
+    </section> <!-- fin del topbar -->
+
+    <!-- Cabecera de la página -->
+    <header id="header" class="padding-xs fondo-gris sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img class="img-fluid" src="assets/img/logo.webp" alt="">
+                </a>
+            </div>
+            
+            <!-- Botón hamburguesa -->
+            <div class="nav-menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Barra de menú -->
+            <nav id="opciones-header" class="nav-menu">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="assets/pages/nosotros.html">Nosotros</a>
+                <a href="assets/pages/servicios.html">Servicios</a>
+                <a href="assets/pages/blog.html">Blog</a>
+                <a href="assets/pages/contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!--Contenido principal de la página-->
+    <main>
+        <!-- Banner -->
+        <section id="banner">
+            <img class="img-fluid" src="assets/img/banner.jpg" alt="">
+            <div class="banner-texto color-blanco">
+                <h1 class="padding-bottom-xs">Explora el mundo</h1>
+                <p>Descubre los mejores viajes con nosotros</p>
+            </div>
+        </section>
+
+        <!--Presentacion con video-->
+        <section class="container">
+            <div id="presentacion" class="padding-xl">
+                <div class="video">
+                    <video src="assets/video/video-avion.mp4" muted autoplay loop></video>
+                </div>
+                <div class="texto-video">
+                    <div class="size-texto padding-bottom-xs">
+                        <h2>Experiencia de vuelo premium</h2>
+                        <p>Descubre el confort, la tecnología y el lujo de nuestros aviones de última generación. Diseñados para brindarte una experiencia única en cada viaje.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Video enlazado a Youtube-->
+            <div class="padding-xl">
+                <div class="size-texto padding-bottom-xl">
+                    <h2>Video relacionado</h2>
+                </div>
+                <iframe
+                    width="100%" height="400" src="https://www.youtube.com/embed/hK8CF5Y4gH4" title="YouTube video" frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!--Seccion nosotros-->
+        <section id="nosotros" class="padding-xl color-blanco fondo-naranja">
+            <div class="container">
+                <div class="size-texto padding-bottom-xs">
+                    <h2>¿Quiénes somos?</h2>
+                    <p>Somos una aerolínea comprometida con brindar experiencias únicas en cada vuelo. Nuestra misión es ofrecer seguridad, confort y tecnología de vanguardia para que cada viaje sea inolvidable.</p>
+                    <p>Contamos con una moderna flota de aviones y un equipo altamente capacitado, enfocado en superar las expectativas de nuestros pasajeros en cada destino.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Sección servicios -->
+        <section id="servicios" class="padding-xl">
+            <div class="container">
+                <div class="size-texto">
+                    <h2 class="padding-bottom-xl">Nuestros servicios</h2>
+                </div>
+            <div class="servicios-organizador padding-top-xl">
+                    <div class="servicio card">
+                        <img class="img-fluid padding-bottom-xs" src="assets/img/servicio1.jpg" alt="">
+                        <div class="size-texto padding-bottom-xs card-container">
+                            <h3>Vuelos internacionales</h3>
+                            <p>Conectamos destinos alrededor del mundo con la máxima comodidad.</p>
+                            <a class="service-button color-blanco" href="#">Conoce más</a>
+                        </div>
+                    </div>
+
+                    <div class="servicio card">
+                        <img class="img-fluid padding-bottom-xs" src="assets/img/servicio2.jpg" alt="">
+                        <div class="size-texto padding-bottom-xs card-container">
+                            <h3>Clase ejecutiva</h3>
+                            <p>Disfruta de asientos premium y atención personalizada durante tu viaje.</p>
+                            <a class="service-button color-blanco" href="#">Conoce más</a>
+                        </div>
+                    </div>
+
+                    <div class="servicio card">
+                        <img class="img-fluid padding-bottom-xs" src="assets/img/servicio3.webp" alt="">
+                        <div class="size-texto padding-bottom-xs card-container">
+                            <h3>Entretenimiento a bordo</h3>
+                            <p>Accede a películas, música y más durante todo el vuelo.</p>
+                            <a class="service-button color-blanco" href="#">Conoce más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección testimonios -->
+        <section id="testimonios" class="padding-xl fondo-naranja">
+            <div class="container">
+                <div class="size-texto color-blanco">
+                    <h2 class="padding-bottom-xl">Lo que dicen nuestros clientes</h2>
+                </div>
+                <div class="testimonios-organizador padding-top-xl">
+
+                    <div class="testimonio card">
+                        <div class="size-texto padding-bottom-xs">
+                            <p class="padding-bottom-xs">"Una experiencia increíble, el servicio fue excelente y el vuelo muy cómodo."</p>
+                            <h4>- Juan Pérez</h4>
+                        </div>
+                    </div>
+
+                    <div class="testimonio card">
+                        <div class="size-texto padding-bottom-xs">
+                            <p class="padding-bottom-xs">"La mejor aerolínea en la que he viajado, atención de primera clase."</p>
+                            <h4>- María López</h4>
+                        </div>
+                    </div>
+
+                    <div class="testimonio card">
+                        <div class="size-texto padding-bottom-xs">
+                            <p class="padding-bottom-xs">"Todo fue perfecto, desde el embarque hasta la llegada."</p>
+                            <h4>- Carlos Ramírez</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Nuestro equipo-->
+        <section id="equipo" class="padding-xl">
+            <div class="container">
+                <div class="size-texto">
+                    <h2 class="padding-bottom-xl">Nuestro equipo</h2>
+                </div>
+                <div class="equipo-organizador padding-top-xl">
+
+                    <div class="miembro card">
+                        <div class="size-texto padding-bottom-xs">
+                            <h3>Juan Pérez</h3>
+                            <p>Piloto principal con más de 10 años de experiencia en vuelos internacionales.</p>
+                        </div>
+                    </div>
+                    <div class="miembro card">
+                        <div class="size-texto padding-bottom-xs">
+                            <h3>María López</h3>
+                            <p>Jefa de tripulación especializada en atención al cliente premium.</p>
+                        </div>
+                    </div>
+                    <div class="miembro card">
+                        <div class="size-texto padding-bottom-xs">
+                            <h3>Carlos Ramírez</h3>
+                            <p>Ingeniero aeronáutico encargado del mantenimiento de la flota.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="size-texto padding-top-xl">
+                    <h2 class="padding-bottom-xl">Colaboradores:</h2>
+                    <p>Trabajamos con empresas líderes en tecnología aeronáutica y servicios de aviación, garantizando seguridad, innovación y calidad en cada uno de nuestros vuelos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección para el tarifario -->
+        <section id="tarifas" class="padding-xl fondo-naranja">
+            <div class="container">
+                <div class="size-texto">
+                    <h2>Tarifas de equipaje</h2>
+                </div>
+
+                <!-- Objeto tabla -->
+                <div class="responsive-table">
+                    <table class="tbl-tarifa">
+                        <!-- Título de la tabla -->
+                        <caption>
+                            Catalogo de precios
+                        </caption>
+
+                        <!-- Cabecera de tabla -->
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Peso</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+
+                        <!-- Cuerpo de tabla -->
+                        <tbody>
+                            <tr>
+                                <td>Cabina</td>
+                                <td>10 kg</td>
+                                <td>Incluido</td>
+                            </tr>
+
+                            <tr>
+                                <td>Bodega</td>
+                                <td>23 kg</td>
+                                <td>$35</td>
+                            </tr>
+
+                            <tr>
+                                <td>Bodega extra</td>
+                                <td>32 kg</td>
+                                <td>$60</td>
+                            </tr>
+                        </tbody>
+
+                        <!-- Pie de tabla -->
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">Precios actualizados al 26/05/2026</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="contact-form" class="padding-xl">
+            <div class="container">
+                <div class="size-texto padding-bottom-xl">
+                    <h2>Contáctate con nosotros</h2>
+                </div>
+
+                <!-- Objeto formulario -->
+                <form action="">
+                    <!-- Flexbox -->
+                    <div>
+                        <div>
+                            <input class="form-control" type="text" placeholder="Nombre" required>
+                        </div>
+                        <div>
+                            <input class="form-control" type="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div>
+                            <input class="form-control" type="text" placeholder="Asunto" required>
+                        </div>
+                        <div>
+                            <textarea class="form-control form-control-noresize" placeholder="Mensaje" rows="6"
+                                cols="40" required></textarea>
+                        </div>
+                        <div>
+                            <input class="form-control" type="text" placeholder="3 + 2 = ?" required>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <label for="">He leído y acepto los
+                                <a class="form-link" target="_blank"
+                                    href="https://www.utp.edu.pe/web/politicas-privacidad">términos y condiciones</a>
+                                de privacidad acerca del tratamiento de mis datos personales.
+                            </label>
+                        </div>
+                        <div>
+                            <button class="form-submit color-blanco fondo-gris" type="submit"><i class="fa-solid fa-paper-plane"></i>
+                                &nbsp;Enviar mensaje</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!--Footer de la pagina-->
+    <footer id="footer" class="padding-xl fondo-gris">
+        <div class="container footer-contenido color-blanco">
+            <div class="footer-info">
+                <h3>Aerolínea</h3>
+                <p>Email: contacto@aerolinea.com</p>
+                <p>Teléfono: +51 999 999 999</p>
+                <p>Dirección: Lima, Perú</p>
+            </div>
+            <div class="footer-copy">
+                <p>© 2026 Aerolínea. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Boton scroll-up -->
+    <a class="scroll-up" href="#">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <!-- Enlazar el HTML con el archivo de scripts javascript -->
+    <script src="assets/scripts/scripts.js"></script>
+</body>
+</html>

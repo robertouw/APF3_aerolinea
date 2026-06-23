@@ -1,0 +1,633 @@
+/* ----------------------- */
+/* Declarar variables CSS  */
+/* ----------------------- */
+:root {
+    /* Paleta de colores */
+    --color1: #203646; /* Color de fondo del top-bar */
+    --color2: #C8D4E2; /* Color del texto del top-bar */
+    --color3: #ff7f29; /* Color primario */
+    --color4: #FFFFFF; /* Color blanco */
+    --color5: #344856; /* Color del párrafo */
+    --color6: #3A3A3A; /* Color gris */ 
+    --color7: #007BFF; /* color azul*/
+    --color8: #f0f0f0; /* color blanco ligeramente oscuro*/
+    --color9: #f4b31a; /* Color dorado*/
+    --color10: #000000; /* Color negro*/
+
+    /* Tipografías */
+    --fuente1: "Poppins", sans-serif;
+
+    /* Interlineados */
+    --spacing1: 1.8;
+}
+
+
+
+
+
+/* --------------------------- */
+/* Selectores de tipo etiqueta */
+/* --------------------------- */
+body {
+    font-family: var(--fuente1);
+    line-height: var(--spacing1);
+}
+
+/*Darle estilos a los botones del header*/
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/*Mover opciones del header a la derecha*/
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+
+/* ------------------------------- */
+/* Selector universal de elementos */
+/* ------------------------------- */
+* {
+    /* Elimina los espacios predeterminados */
+    margin: 0;
+    padding: 0;
+
+    /* Evita que un contenedor cambie de tamaño al agregar espacios */
+    box-sizing: border-box;
+}
+
+/* Elimina los espacios que aparecen debajo del objeto */
+img, video {
+    display: block;
+}
+
+
+
+
+
+
+/* --------------------- */
+/* Selectores de tipo id */
+/* --------------------- */
+
+/* Selectores para estilizar el topbar */
+#topbar {
+    background-color: var(--color9);
+    color: var(--color3);
+    font-size: 0.8rem;
+    
+}
+
+/*Posicionar cosas encima del banner*/
+#banner {
+    position: relative;
+}
+
+/*Colocar una capa encima para oscurecer la imagen del banner*/
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/*Cambiar el color de las opciones al pasar cursor*/
+/*NOTA hover = “cuando el cursor está encima”*/
+#opciones-header a:hover {
+    color: var(--color4);
+}
+
+/*Acomodar video a la izquierda y texto a la derecha*/
+#presentacion {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+/*Centrar servicios, testimonios y equipo*/
+#servicios, #equipo, #testimonios {
+    text-align: center;
+}
+
+/*Color de letra blanco en tarifas*/
+#tarifas {
+    color: var(--color4);
+}
+
+/* ------------------------ */
+/* Selectores de tipo class */
+/* ------------------------ */
+
+/* Padding extra pequeño */
+.padding-xs {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Padding extra grande */
+.padding-xl {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+/*Padding top grande*/
+.padding-top-xl {
+    padding-top: 60px;
+}
+
+/*Padding bottom pequeño*/
+.padding-bottom-xs {
+    padding-bottom: 15px;
+}
+
+/*Padding bottom grande*/
+.padding-bottom-xl {
+    padding-bottom: 50px;
+}
+
+/*Aplicar color blanco*/
+.color-blanco {
+    color: var(--color4);
+}
+
+/*Aplicar fondo naranja*/
+.fondo-naranja {
+    background-color: var(--color3);
+}
+
+/*Aplicar fondo gris*/
+.fondo-gris {
+    background-color: var(--color6);
+}
+
+/*Aplicar fondo blanco*/
+.fondo-blanco {
+    background-color: var(--color4);
+}
+
+
+/*Ajustar tamaño del logo*/
+.nav-logo img {
+    height: 45px;
+    width: auto;
+    max-width: 100%;
+}
+
+/* Ajustar el ancho del contenedor en pantalla */
+.container {
+    max-width: 70%;
+    margin: auto;
+}
+
+/* Responsive para imágenes */
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+/*Posicionar texto del banner*/
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*Tamaño del texto del banner*/
+.banner-texto h1, .banner-texto p {
+    font-size: 3vw; /*vw para que se ajuste al tamaño de la pantalla y no se deforme al achicar la imagen*/
+}
+
+/*Ajustar video de avion*/
+.video video {
+    width: 100%;
+    max-width: 1280px;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+/*Ajusta el tamaño de todos los textos en general*/
+.size-texto{
+    font-size: 25px;
+    line-height: 2;
+}
+
+/*Ajustar texto al lado del video*/
+.texto-video {
+    max-width: 500px;
+}
+
+/*Aplicar estilo cartas*/
+.servicios-organizador, .testimonios-organizador, .equipo-organizador {
+    display: flex; /*Organizar en columnas*/
+    gap: 45px; /*Espacio entre elementos*/
+    align-items:stretch;
+}
+
+/*Estilo para cada carta*/
+.servicio, .miembro, .testimonio {
+    display:flex;
+    flex-direction:column;
+    background-color: var(--color8);
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1; /* Ocupa espacio del contenedor Flexbox*/
+}
+
+/*Ajustar imagenes de cada servicio para que no tengan tamaños distintos*/
+.servicio img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/*Ajustar textos de testimonios*/
+.testimonio p {
+    font-style: italic; /*cursiva*/
+    color: var(--color6); /*color gris*/
+}
+
+/*Distribuir contenido del footer*/
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Clase topbar-container*/
+.topbar-container {
+    display: flex; /*activar Flexbox en el contenedor*/
+    flex-direction: row; /*ordenar los hijos en fila horizontal*/
+    justify-content: space-between; /*Espacio entre objetos horizontales*/
+    align-items: center; /* Centrar verticalmente */
+}
+
+.topbar-container a {
+    color: var(--color4); /*Cambiar color de texto*/
+    text-decoration: none; /*Quitar subrayado de enlaces*/
+    padding: 0px 5px; /*Agregar espacio interno*/
+}
+
+/* Header siempre visible */
+.sticky-top {
+    position: sticky; /* Al hacer scroll se pega a la pantalla*/
+    top: 0px; /*Indica punto donde quedarse pegado*/
+    z-index: 1000; /*Da prioridad visual*/
+}
+
+
+/*Efectos a cartas*/
+.card {
+    transform-style: preserve-3d; /*Para que los hijos tengan efecto 3d*/
+    backface-visibility: hidden; /*Ocultar parte trasera cuando rota*/
+    overflow: hidden; /*Evita que el contenido se salga de la tarjeta*/
+    transition: all 0.4s ease-in-out; /*Suavizar cambio*/
+}
+
+.card:hover {
+    transform: translateY(10px) perspective(700px) rotateY(5deg); /* efecto 3d al pasar el mouse*/
+    box-shadow: 0 5px 10px var(--color2); /* sombra*/
+}
+
+/* Botones de cartas*/
+.service-button {
+    display: inline-block; /* Cada enlace se tratará como una caja */
+    background-color: var(--color3); /* Color de fondo del boton*/
+    padding: 15px 30px; /* Espacio interno*/
+    text-decoration: none; /* Quitar el subrayado */
+    transition: all 0.5s ease-in-out; /* Suavizar transición*/
+    margin-top: auto; /* Empujar el botón hacia abajo dentro del contenedor */
+    align-self: center; /* Centrar */
+}
+
+.service-button:hover {
+    background-color: var(--color6); /* Cambia el color al pasar el mouse*/
+}
+
+
+
+.card-container{
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Organizar elementos en columna */
+    flex: 1; /* Permite que ocupe espacio disponible */
+}
+
+
+/*Estilo al formulario de contacto*/
+.form-control {
+    display: block; /* Ocupa toda la línea */
+    width: 100%; /* Ancho completo */
+    padding: 10px 20px; /* Espacio interno */
+    margin-bottom: 10px; /* Separación entre campos */
+    font: inherit; /* Usar la misma fuente del documento */
+    border: none; /* Quitar borde por defecto */
+    outline: none; /* Quitar borde azul al seleccionar */
+    border-bottom: 1px solid var(--color5); /* Línea inferior como estilo */
+}
+
+/* Evita que el textarea se pueda redimensionar */
+.form-control-noresize {
+    resize: none;
+}
+
+/*Estilos boton enviar*/
+.form-submit {
+    padding: 15px 20px;
+    border: none;
+    font: inherit;
+    margin-top: 15px; /*Espacio superior externo*/
+    cursor: pointer; /*Manito cursor*/
+    text-transform: uppercase; /*Convertir texto a mayusculas*/
+    transition: all 0.3s ease-in-out;
+}
+
+.form-submit:hover {
+    background-color: var(--color3); /* Boton submit naranja al pasar mouse*/
+}
+
+/*Estilo a "Terminos y condiciones"*/
+.form-link {
+    color: var(--color3);
+    text-decoration: none; /* Quitar subrayado*/
+}
+
+/*Tabla tarifas*/
+.tbl-tarifa {
+    width: 100%; /*Ocupa todo el ancho del contenedor*/
+    border-collapse: collapse; /*Unir borde de las celdas*/
+}
+
+/* Tabla responsiva*/
+.responsive-table {
+    overflow-x: auto; /* Hace la tabla responsiva con scroll */
+}
+
+/*Cabezera de la tabla*/
+.tbl-tarifa th {
+    background-color: var(--color6); /*Colorear fondo de celdas*/
+    border: 2px solid var(--color6); /*Definir borde de las celdas*/
+    padding: 10px; /* Espacio interno */
+}
+
+/*Celdas del cuerpo*/
+.tbl-tarifa td {
+    background-color: var(--color4);
+    border: 2px solid var(--color6);
+    color: var(--color10);
+    padding: 10px;
+}
+
+/*Pie de la tabla*/
+.tbl-tarifa tfoot td {
+    font-size: 0.6rem; /*Rem: toma como referencia el tamaño de letra base de la página*/
+    text-align: right; /* Alinear texto a la derecha*/
+    font-style: italic; /* Cursiva*/
+    font-weight: bold; /* Negrita*/
+}
+
+/*"Catalogo de precios"*/
+.tbl-tarifa caption {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Diseño del boton scroll up*/
+.scroll-up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    /* Centrar horizontalmente */
+    line-height: 45px;
+    /* Centrar verticalmente */
+
+    background-color: var(--color9);
+    color: var(--color4);
+    border: 1px solid var(--color4);
+}
+
+/* Salto más suave*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Boton hamburguesa oculto*/
+.nav-menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    color: var(--color4);
+}
+
+
+
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--color4);
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: var(--color9);
+    color: var(--color4);
+}
+
+
+/* ===================================== */
+/* Pantalla grande - hasta 1200px */
+/* ===================================== */
+@media (max-width: 1200px) {
+
+    .container {
+        max-width: 85%;
+    }
+
+    .size-texto {
+        font-size: 22px;
+    }
+}
+
+
+/* ===================================== */
+/* Pantalla mediana - hasta 992px */
+/* ===================================== */
+@media (max-width: 992px) {
+
+    .container {
+        max-width: 90%;
+    }
+
+    .size-texto {
+        font-size: 20px;
+    }
+
+    .servicios-organizador,
+    .testimonios-organizador,
+    .equipo-organizador {
+        gap: 25px;
+    }
+}
+
+
+/* ===================================== */
+/* Tableta - hasta 768px */
+/* ===================================== */
+@media (max-width: 768px) {
+
+    .container {
+        max-width: 95%;
+    }
+
+    /* Menú hamburguesa */
+    .nav-menu-toggle {
+        display: block;
+        color: var(--color4);
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 220px;
+
+        background: var(--color4);
+        padding: 15px;
+        border-radius: 12px;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu a {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        padding: 12px;
+        text-align: center;
+
+        color: var(--color10);
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a:focus,
+    .nav-menu a:active {
+        background-color: var(--color9);
+        color: var(--color4);
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* Secciones en columna */
+    #presentacion,
+    .servicios-organizador,
+    .testimonios-organizador,
+    .equipo-organizador,
+    .footer-contenido {
+        flex-direction: column;
+    }
+
+    .banner-texto h1,
+    .banner-texto p {
+        font-size: 5vw;
+    }
+
+    .size-texto {
+        font-size: 18px;
+    }
+}
+
+
+/* ===================================== */
+/* Móvil - hasta 576px */
+/* ===================================== */
+@media (max-width: 576px) {
+
+    .container {
+        max-width: 95%;
+    }
+
+    .topbar-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .topbar-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        right: 0;
+        border-radius: 0;
+    }
+
+    .banner-texto h1,
+    .banner-texto p {
+        font-size: 1.5rem;
+    }
+
+    .size-texto {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .padding-xl {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .scroll-up {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* Resaltar seccion actual*/
+.nav-menu a.active {
+    background-color: var(--color9);
+    color: var(--color4);
+    font-weight: bold;
+}
